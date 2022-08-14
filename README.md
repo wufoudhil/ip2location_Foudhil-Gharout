@@ -53,7 +53,7 @@ Web Application used to geolocalize a domain's IP and get many usefull informati
 
 The main core of this work is:
 
-* <code><img width="10%" src="https://www.vectorlogo.zone/logos/python/python-ar21.svg"></code>[python.org]
+* <img height=50 src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg"/>[python.org]
 * [![Django][djangoproject.com]][Django-url]
 * [![Bootstrap][Bootstrap.com]][Bootstrap-url]
 * [![JQuery][JQuery.com]][JQuery-url]
