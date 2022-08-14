@@ -53,7 +53,7 @@ Web Application used to geolocalize a domain's IP and get many usefull informati
 
 The main core of this work is:
 
-* <img height=50 src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg"/>[python.org]
+* [![]][python.org]
 * [![Django][djangoproject.com]][Django-url]
 * [![Bootstrap][Bootstrap.com]][Bootstrap-url]
 * [![JQuery][JQuery.com]][JQuery-url]
@@ -123,3 +123,11 @@ This is free software, licensed under the GPL v3 [license](LICENSE/LICENSE).
 Foudhil Gharout - [@wufoudhil](https://twitter.com/wufoudhil) - wufoudhil@gmail.com
 
 <p align="right"><a href="#readme-top">Top</a></p>
+
+
+[linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
+[linkedin-url]: https://linkedin.com/in/linkedin_username
+[Bootstrap.com]: https://img.shields.io/badge/Bootstrap-563D7C?style=for-the-badge&logo=bootstrap&logoColor=white
+[Bootstrap-url]: https://getbootstrap.com
+[JQuery.com]: https://img.shields.io/badge/jQuery-0769AD?style=for-the-badge&logo=jquery&logoColor=white
+[JQuery-url]: https://jquery.com 
