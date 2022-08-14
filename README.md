@@ -55,7 +55,7 @@ The main core of this work is:
 
 * [![](https://img.shields.io/badge/Python-2a4169?style=for-the-badge&logo=python&logoColor=white)](https://www.python.org/)
 * [![](https://img.shields.io/badge/Django-112e1d?style=for-the-badge&logo=django&logoColor=white)](https://www.djangoproject.com/)
-* [![](https://img.shields.io/badge/HTML5-112e1d?style=for-the-badge&logo=html5&logoColor=white)](https://dev.w3.org/html5/spec-LC/)
+* [![](https://img.shields.io/badge/HTML5-e38c22?style=for-the-badge&logo=html5&logoColor=white)](https://dev.w3.org/html5/spec-LC/)
 * [![Bootstrap][Bootstrap.com]][Bootstrap-url]
 * [![JQuery][JQuery.com]][JQuery-url]
 
