@@ -53,11 +53,10 @@ Web Application used to geolocalize a domain's IP and get many usefull informati
 
 The main core of this work is:
 
-* [![]][python.org]
-* [![Django][djangoproject.com]][Django-url]
+* [![](https://img.shields.io/badge/Python-2a4169?style=for-the-badge&logo=python&logoColor=white)](https://www.python.org/)
+* [![](https://img.shields.io/badge/Django-112e1d?style=for-the-badge&logo=django&logoColor=white)](https://www.djangoproject.com/)
 * [![Bootstrap][Bootstrap.com]][Bootstrap-url]
 * [![JQuery][JQuery.com]][JQuery-url]
-* [![](https://img.shields.io/badge/Django-112e1d?style=for-the-badge&logo=django&logoColor=white)](https://www.djangoproject.com/)
 
 <p align="right"><a href="#readme-top">Top</a></p>
 
