@@ -122,7 +122,7 @@ This is free software, licensed under the GPL v3 [license](LICENSE/LICENSE).
 ## Contact
 
 <div align="center">
-Foudhil Gharout </br> [![twitter](https://github.com/shikhar1020jais1/Git-Social/blob/master/Icons/Twitter.png (Twitter))](https://twitter.com/wufoudhil)  [![linkedin](https://github.com/shikhar1020jais1/Git-Social/blob/master/Icons/LinkedIn.png (LinkedIn))](https://www.linkedin.com/in/foudhil-gharout/)</br> wufoudhil@gmail.com
+Foudhil Gharout </br> [wufoudhil](https://twitter.com/wufoudhil)  [foudhil-gharout](https://www.linkedin.com/in/foudhil-gharout/)</br> wufoudhil@gmail.com
 </div>
 
 <p align="right"><a href="#readme-top">Top</a></p>
