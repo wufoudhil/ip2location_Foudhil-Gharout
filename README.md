@@ -67,7 +67,7 @@ The main core of this work is:
 Download or just clone the repo to your local machine
 
 ```sh
-$ git clone https://github.com/wufoudhil/ip2location_Foudhil-Gharout
+git clone https://github.com/wufoudhil/ip2location_Foudhil-Gharout
 ``` 
 
 <p align="right"><a href="#readme-top">Top</a></p>
@@ -77,7 +77,7 @@ $ git clone https://github.com/wufoudhil/ip2location_Foudhil-Gharout
 Install the required Python packages for the first use
 
 ```sh
-$ pip install -r requirements.txt
+pip install -r requirements.txt
 ``` 
 
 The above command will install the following packages:
@@ -126,7 +126,3 @@ Foudhil Gharout </br> <a href="https://twitter.com/wufoudhil"><img src="https://
 </div>
 
 <p align="right"><a href="#readme-top">Top</a></p>
-
-
-[linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
-[linkedin-url]: https://linkedin.com/in/linkedin_username
