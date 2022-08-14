@@ -130,4 +130,5 @@ Foudhil Gharout - [@wufoudhil](https://twitter.com/wufoudhil) - wufoudhil@gmail.
 [Bootstrap.com]: https://img.shields.io/badge/Bootstrap-563D7C?style=for-the-badge&logo=bootstrap&logoColor=white
 [Bootstrap-url]: https://getbootstrap.com
 [JQuery.com]: https://img.shields.io/badge/jQuery-0769AD?style=for-the-badge&logo=jquery&logoColor=white
-[JQuery-url]: https://jquery.com 
+[JQuery-url]: https://jquery.com
+[djangoproject.com]: https://img.shields.io/badge/django-0769AD?style=for-the-badge&logo=django&logoColor=white
