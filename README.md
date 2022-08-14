@@ -57,7 +57,7 @@ The main core of this work is:
 * [![Django][djangoproject.com]][Django-url]
 * [![Bootstrap][Bootstrap.com]][Bootstrap-url]
 * [![JQuery][JQuery.com]][JQuery-url]
-* [![](https://img.shields.io/badge/Medium-12100E?style=for-the-badge&logo=medium&logoColor=white)](https://medium.com/@zluvsand)
+* [![](https://img.shields.io/badge/Django-12100E?style=for-the-badge&logo=django&logoColor=white)](https://www.djangoproject.com/)
 
 <p align="right"><a href="#readme-top">Top</a></p>
 
