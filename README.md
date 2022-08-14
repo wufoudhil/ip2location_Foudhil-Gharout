@@ -121,7 +121,7 @@ This is free software, licensed under the GPL v3 [license](LICENSE/LICENSE).
 
 ## Contact
 
-Foudhil Gharout - [![twitter](https://github.com/shikhar1020jais1/Git-Social/blob/master/Icons/Twitter.png (Twitter))][https://twitter.com/wufoudhil] - [![linkedin](https://github.com/shikhar1020jais1/Git-Social/blob/master/Icons/LinkedIn.png (LinkedIn))][https://www.linkedin.com/in/foudhil-gharout/] - wufoudhil@gmail.com
+Foudhil Gharout - [![twitter](https://github.com/shikhar1020jais1/Git-Social/blob/master/Icons/Twitter.png (Twitter))](https://twitter.com/wufoudhil) - [![linkedin](https://github.com/shikhar1020jais1/Git-Social/blob/master/Icons/LinkedIn.png (LinkedIn))](https://www.linkedin.com/in/foudhil-gharout/) - wufoudhil@gmail.com
 
 <p align="right"><a href="#readme-top">Top</a></p>
 
