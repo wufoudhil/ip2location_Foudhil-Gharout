@@ -1,0 +1,311 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>IP2Location | Foudhil Gharout</title>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="{% static 'img/logo.png' %}">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+</head>
+
+<body>
+    <div class="container">
+        <div class="row height d-flex justify-content-center align-items-center">
+            <div class="col-md-8 site-logo">
+
+                <a href="https://www.ip2location.com/" title="www.ip2location.com">
+                    <div class="text-center">
+                        <img style="max-width: 100%; height: auto; margin-left: auto; margin-right: auto; display: block;"
+                            src="https://cdn.ip2location.com/assets/img/logo.png" width="256" height="32"
+                            alt="IP2Location Logo">
+                    </div>
+                </a>
+                <a href="{% url 'Home' %}" title="Home">
+                    <div class="text-center">
+                        <img style="max-width: 100%; height: auto; margin-left: auto; margin-right: auto; display: block;"
+                            src="{% static 'img/logo.png' %}" width="45" alt="IP2Location by Gharout Logo">
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-8">
+                <div class="search">
+                    <form method="POST">
+                        {% csrf_token %}
+                        <input type="text" class="form-control" placeholder="Type or paste your website, link, IPv4 here!" id="link">
+
+                        <button class="btn btn-primary">Search</button>
+                        <a href="#" class="two" title="Paste"><i class="fa fa-clipboard"
+                                style="font-size: 21px; color: #000;"></i>
+                        </a>
+                        <a href="#" class="three" title="Clear Box"><i class="fa fa-trash"
+                                style="font-size: 21px; color: #000;"></i>
+                        </a>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <div class="row margin-bottom-40">
+            <div class="col-md-12 col-sm-12 text-center">
+                <div class="alert-container">
+                    <div class="alert alert-warning alert-dismissible fade show" role="alert"></div>
+                </div>
+                <div style="border-top:1px solid #c9ecf3; padding:10px 0; background-color:#f5f9fa;">
+                    <h2><strong id="label"> Your Public IP informations shown below </h2>
+                </div>
+            </div>
+            <div class="col-md-12 col-sm-12">
+                <div class="panel panel-info">
+                    <div class="panel-body">
+                        <div class="row" style="margin:16px;">
+                            <div class="col-md-12">
+                                <div class="row">
+                                    <div class="col-md-4">
+                                        <div class="margin-bottom-20">
+                                            <label>Your IP Address</label>
+                                            <div class="info-content" id="ip-address" loaded="true">{{ data.ip|default:"-" }}</div>
+                                        </div>
+
+                                        <div class="margin-bottom-20">
+                                            <label>Country</label>
+                                            <div class="info-content" id="country">{{ data.country_long|default:"-" }}</div>
+                                        </div>
+
+                                        <div class="margin-bottom-20">
+                                            <label>Region</label>
+                                            <div class="info-content" id="region-name">{{ data.region|default:"-" }}</div>
+                                        </div>
+
+                                        <div class="margin-bottom-20">
+                                            <label>City</label>
+                                            <div class="info-content" id="city-name">{{ data.city|default:"-" }}</div>
+                                        </div>
+
+                                        <div class="margin-bottom-20">
+                                            <label>Coordinates</label>
+                                            <div class="info-content" id="coordinates">{{ data.latitude }}, {{ data.longitude|default:"-" }}</div>
+                                        </div>
+
+                                        <div class="margin-bottom-20">
+                                            <label>ISP</label>
+                                            <div class="info-content" id="isp">{{ data.isp|default:"-" }}</div>
+                                        </div>
+
+                                        <div class="margin-bottom-20">
+                                            <label>Time Zone</label>
+                                            <div class="info-content" id="time-zone">{{ data.timezone|default:"-" }}</div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-4">
+                                        <div class="margin-bottom-20">
+                                            <label>Domain</label>
+                                            <div class="info-content" id="domain">{{ data.domain|default:"-" }}</div>
+                                        </div>
+
+                                        <div class="margin-bottom-20">
+                                            <label>Net Speed</label>
+                                            <div class="info-content" id="net-speed">{{ data.net_speed|default:"-" }}</div>
+                                        </div>
+
+                                        <div class="margin-bottom-20">
+                                            <label>IDD &amp; Area Code</label>
+                                            <div class="info-content" id="idd-area-code">{{ data.idd_code }} - {{ data.area_code }}</div>
+                                        </div>
+
+                                        <div class="margin-bottom-20">
+                                            <label>ZIP Code</label>
+                                            <div class="info-content" id="zip-code">{{ data.zipcode|default:"-" }}</div>
+                                        </div>
+
+                                        <div class="margin-bottom-20">
+                                            <label>Weather Station</label>
+                                            <div class="info-content" id="weather-station">{{ data.idd_code|default:"-" }}</div>
+                                        </div>
+
+                                        <div class="margin-bottom-20">
+                                            <label>Elevation</label>
+                                            <div class="info-content" id="elevation">{{ data.elevation|default:"-" }}</div>
+                                        </div>
+
+                                        <div class="margin-bottom-20">
+                                            <label>Usage Type</label>
+                                            <div class="info-content" id="usage-type">{{ data.elevation|default:"-" }}</div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-4">
+                                        <iframe id="map" src="https://maps.google.com/maps?q={{ data.latitude }},{{ data.longitude|default:"Tissemsilt" }}&output=embed"
+                                            frameborder="1" width="100%" height="100%"></iframe>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="py-3 my-4">
+        <p class="nav justify-content-center">IP2LOCATION PROGRAMMING CONTEST 2022</p>
+        <p class="nav justify-content-center border-bottom pb-3 mb-3">Search Website From Domain And Get IP Info With API By IP2Location.</p>
+        <p class="text-center text-muted">© {% now 'Y'%} Foudhil Gharout</p>
+    </footer>
+
+    <script
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB41DRUbKWJHPxaFjMAwdrzWzbVKartNGg&callback=initMap&v=weekly"
+        defer></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.js"
+        integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script type="text/javascript">
+        function clear() {
+            $('#link').val('');
+            $(".alert").hide();
+        
+            $('#ip-address').text("-");
+            $('#country').text("-");
+            $('#region-name').text("-");
+            $('#city-name').text("-")
+            $('#coordinates').text("-");
+            $('#isp').text("-");
+            $('#time-zone').text("-");
+            $('#domain').text("-");
+            $('#net-speed').text("-");
+            $('#idd-area-code').text("-");
+            $('#zip-code').text("-");
+            $('#weather-station').text("-");
+            $('#elevation').text("-");
+            $('#usage-type').text("-");
+            $('#map').removeAttr('src');
+            $('#map').css('background-image', 'url(../static/img/ip_location.jpg)');
+            $('#map').css('background-size', 'cover');
+            
+            $('#label').text("Your Website's IP informations shown below")
+        }
+        
+        function paste() {
+            $(".alert").hide();
+        
+            $('#ip-address').text("-");
+            $('#country').text("-");
+            $('#region-name').text("-");
+            $('#city-name').text("-")
+            $('#coordinates').text("-");
+            $('#isp').text("-");
+            $('#time-zone').text("-");
+            $('#domain').text("-");
+            $('#net-speed').text("-");
+            $('#idd-area-code').text("-");
+            $('#zip-code').text("-");
+            $('#weather-station').text("-");
+            $('#elevation').text("-");
+            $('#usage-type').text("-");
+        }
+        $('.three').click(function (e) {
+            e.preventDefault();
+            clear();
+            return false;
+        });
+        
+        $('.two').click(function (e) {
+            e.preventDefault();
+            navigator.clipboard.readText().then((clipText) =>
+                $('#link').val(clipText));
+            paste();
+            return false;
+        });
+        
+        $('button').click(function (e) {
+            event.preventDefault();
+            let formData = new FormData();
+            formData.append('link', document.querySelector("#link").value);
+        
+        
+            let csrfTokenValue = document.querySelector('[name=csrfmiddlewaretoken]').value;
+            const request = new Request('{% url "getIpInfo" %}', {
+                method: 'POST',
+                body: formData,
+                headers: { 'X-CSRFToken': csrfTokenValue }
+            });
+        
+            fetch(request)
+                .then(response => response.json())
+                .then(result => {
+                    if (result["data"]["err_txt"]) {
+        
+                        $('#ip-address').text("-");
+                        $('#country').text("-");
+                        $('#region-name').text("-");
+                        $('#city-name').text("-")
+                        $('#coordinates').text("-");
+                        $('#isp').text("-");
+                        $('#time-zone').text("-");
+                        $('#domain').text("-");
+                        $('#net-speed').text("-");
+                        $('#idd-area-code').text("-");
+                        $('#zip-code').text("-");
+                        $('#weather-station').text("-");
+                        $('#elevation').text("-");
+                        $('#usage-type').text("-");
+                        $('#map').removeAttr('src');
+                        $('#map').css('background-image', 'url(../static/img/404.jpg)');
+                        $('#map').css('background-size', 'cover');
+                        
+                        $(".alert-container").html('<div class="alert alert-warning alert-dismissible fade show" role="alert"><strong>Sorry!</strong>'+result["data"]["err_txt"]+'<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button></div>');
+                        $(".alert").show();
+                    }
+                    else {
+                        $(".alert").hide();
+                        $('#ip-address').text(result["data"]['ip']);
+                        $('#country').text(result["data"]['country_long']);
+                        $('#region-name').text(result["data"]['region']);
+                        $('#city-name').text(result["data"]['city']);
+                        $('#coordinates').text(result["data"]['latitude'] + ", " + result["data"]['longitude']);
+                        $('#isp').text(result["data"]['isp']);
+                        $('#time-zone').text(result["data"]['timezone']);
+                        $('#domain').text(result["data"]['domain']);
+                        $('#net-speed').text(result["data"]['net_speed']);
+                        $('#idd-area-code').text(result["data"]['idd_code'] + " - " + result["data"]['area_code']);
+                        $('#zip-code').text(result["data"]['zipcode']);
+                        $('#weather-station').text(result["data"]['weather_station_code']);
+                        $('#elevation').text(result["data"]['elevation']);
+                        $('#usage-type').text(result["data"]['usage_type']);
+                        $('#map').attr('src', "https://maps.google.com/maps?q=" + result["data"]['latitude'] + "," + result["data"]['longitude'] + "&output=embed");
+                        $('#label').text("Your Website's IP informations shown below");
+                    }
+                })
+        });
+        
+        // Initialize and add the map
+        function initMap() {
+            // The location of Uluru
+            const uluru = { lat: 37.405991, lng: -122.078514 };
+            // The map, centered at Uluru
+            const map = new google.maps.Map(document.getElementById("map"), {
+                zoom: 4,
+                center: uluru,
+            });
+            // The marker, positioned at Uluru
+            const marker = new google.maps.Marker({
+                position: uluru,
+                map: map,
+            });
+        }
+        
+        window.initMap = initMap;
+        
+    </script>
+</body>
+
+</html>

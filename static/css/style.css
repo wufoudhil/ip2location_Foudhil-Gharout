@@ -1,0 +1,108 @@
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #888;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:weight@100;200;300;400;500;600;700;800&display=swap");
+
+
+body {
+    background-color: #eee;
+    font-family: "Poppins", sans-serif;
+}
+
+.height {
+    height: 20vh;
+}
+
+.search {
+    position: relative;
+    box-shadow: 0 0 40px rgba(51, 51, 51, .1);
+    bottom: 5px;
+}
+
+.search button {
+
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    height: 50px;
+    width: 110px;
+    background: blue;
+
+}
+
+.search .two {
+    position: absolute;
+    top: 20px;
+    right: 110px;
+    height: 50px;
+    width: 40px;
+}
+
+.search .three {
+    position: absolute;
+    top: 20px;
+    right: 150px;
+    height: 50px;
+    width: 40px;
+}
+
+.search input {
+
+    height: 60px;
+    text-indent: 25px;
+    border: 2px solid #d6d4d4;
+
+
+}
+
+.search input:focus {
+
+    box-shadow: none;
+    border: 2px solid blue;
+
+
+}
+
+.search .fa-search {
+
+    position: absolute;
+    top: 20px;
+    left: 16px;
+
+}
+
+.panel-info {
+    text-align: center;
+}
+
+label {
+    font-weight: bold;
+}
+
+.margin-bottom-20 {
+    margin-bottom: 20px;
+}
+
+.alert {
+    display: none;
+}
+
+.info-content{
+    font-weight: 300;
+}
