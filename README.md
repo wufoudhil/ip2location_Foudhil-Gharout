@@ -56,8 +56,8 @@ The main core of this work is:
 * [![](https://img.shields.io/badge/Python-2a4169?style=for-the-badge&logo=python&logoColor=white)](https://www.python.org/)
 * [![](https://img.shields.io/badge/Django-112e1d?style=for-the-badge&logo=django&logoColor=white)](https://www.djangoproject.com/)
 * [![](https://img.shields.io/badge/HTML5-e38c22?style=for-the-badge&logo=html5&logoColor=white)](https://dev.w3.org/html5/spec-LC/)
-* [![Bootstrap][Bootstrap.com]][Bootstrap-url]
-* [![JQuery][JQuery.com]][JQuery-url]
+* [![](https://img.shields.io/badge/Bootstrap-563D7C?style=for-the-badge&logo=bootstrap&logoColor=white)](https://getbootstrap.com/)
+* [![](https://img.shields.io/badge/jQuery-0769AD?style=for-the-badge&logo=jquery&logoColor=white)](https://jquery.com/)
 
 <p align="right"><a href="#readme-top">Top</a></p>
 
@@ -121,15 +121,10 @@ This is free software, licensed under the GPL v3 [license](LICENSE/LICENSE).
 
 ## Contact
 
-Foudhil Gharout - [@wufoudhil](https://twitter.com/wufoudhil) - wufoudhil@gmail.com
+Foudhil Gharout - [![twitter](https://github.com/shikhar1020jais1/Git-Social/blob/master/Icons/Twitter.png (Twitter))][https://twitter.com/wufoudhil] - [![linkedin](https://github.com/shikhar1020jais1/Git-Social/blob/master/Icons/LinkedIn.png (LinkedIn))][https://www.linkedin.com/in/foudhil-gharout/] - wufoudhil@gmail.com
 
 <p align="right"><a href="#readme-top">Top</a></p>
 
 
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: https://linkedin.com/in/linkedin_username
-[Bootstrap.com]: https://img.shields.io/badge/Bootstrap-563D7C?style=for-the-badge&logo=bootstrap&logoColor=white
-[Bootstrap-url]: https://getbootstrap.com
-[JQuery.com]: https://img.shields.io/badge/jQuery-0769AD?style=for-the-badge&logo=jquery&logoColor=white
-[JQuery-url]: https://jquery.com
-[djangoproject.com]: https://img.shields.io/badge/django-0769AD?style=for-the-badge&logo=django&logoColor=white
