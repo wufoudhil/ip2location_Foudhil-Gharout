@@ -16,12 +16,9 @@ from django.http import JsonResponse
 database = IP2Location.IP2Location(os.path.join("data", "IP2LOCATION-LITE-DB11.BIN"))
 
 def home(request):
+    
     # In the Home page return the User Public IP informations
-    my_ip = get('https://api.ipify.org').text
-    rec = database.get_all(my_ip)
-    data = json.loads(json.dumps(rec.__dict__))
-    context = {"data": data}
-    return render(request, "index.html", context)
+    return render(request, "index.html")
 
 
 def getIpInfo(request):
