@@ -1,7 +1,7 @@
 <a id="readme-top"></a>
 <br />
 <div align="center">
-  <a href="https://github.com/wufoudhil/ip2location_Foudhil-Gharout">
+  <a href="https://wufoudhil.pythonanywhere.com">
     <img src="static/img/logo.png" alt="Logo" width="100">
   </a>
 
@@ -116,7 +116,7 @@ and if you want to try some IPv4, website link or domain just type/paste it in t
 
 ## Demo
 
-https://wufoudhil.pythonanywhere.com/
+https://wufoudhil.pythonanywhere.com
 
 ## License
 
