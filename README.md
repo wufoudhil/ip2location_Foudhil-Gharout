@@ -102,7 +102,7 @@ No real action is needed just ``` cd ``` to the app root with your Terminal/Comm
 
 ## Usage
 
-When run the server visit your localhost and you'll get your Public IP informations and location map
+if you run the app on your localhost you'll get your Public IP informations and location map, otherwise it returns the hosted machine's
 
 <div align="center">
   <img src="ScreenShoots/img1.jpg" alt="App Screen-Shoot" width="600">
@@ -116,7 +116,7 @@ and if you want to try some IPv4, website link or domain just type/paste it in t
 
 ## Demo
 
-http://wufoudhil.pythonanywhere.com/
+https://wufoudhil.pythonanywhere.com/
 
 ## License
 
