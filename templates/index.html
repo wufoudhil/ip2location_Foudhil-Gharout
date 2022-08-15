@@ -72,74 +72,74 @@
                                     <div class="col-md-4">
                                         <div class="margin-bottom-20">
                                             <label>Your IP Address</label>
-                                            <div class="info-content" id="ip-address" loaded="true">{{ data.ip|default:"-" }}</div>
+                                            <div class="info-content" id="ip-address" loaded="true">-</div>
                                         </div>
 
                                         <div class="margin-bottom-20">
                                             <label>Country</label>
-                                            <div class="info-content" id="country">{{ data.country_long|default:"-" }}</div>
+                                            <div class="info-content" id="country">-</div>
                                         </div>
 
                                         <div class="margin-bottom-20">
                                             <label>Region</label>
-                                            <div class="info-content" id="region-name">{{ data.region|default:"-" }}</div>
+                                            <div class="info-content" id="region-name">-</div>
                                         </div>
 
                                         <div class="margin-bottom-20">
                                             <label>City</label>
-                                            <div class="info-content" id="city-name">{{ data.city|default:"-" }}</div>
+                                            <div class="info-content" id="city-name">-</div>
                                         </div>
 
                                         <div class="margin-bottom-20">
                                             <label>Coordinates</label>
-                                            <div class="info-content" id="coordinates">{{ data.latitude }}, {{ data.longitude|default:"-" }}</div>
+                                            <div class="info-content" id="coordinates">-</div>
                                         </div>
 
                                         <div class="margin-bottom-20">
                                             <label>ISP</label>
-                                            <div class="info-content" id="isp">{{ data.isp|default:"-" }}</div>
+                                            <div class="info-content" id="isp">-</div>
                                         </div>
 
                                         <div class="margin-bottom-20">
                                             <label>Time Zone</label>
-                                            <div class="info-content" id="time-zone">{{ data.timezone|default:"-" }}</div>
+                                            <div class="info-content" id="time-zone">-</div>
                                         </div>
                                     </div>
 
                                     <div class="col-md-4">
                                         <div class="margin-bottom-20">
                                             <label>Domain</label>
-                                            <div class="info-content" id="domain">{{ data.domain|default:"-" }}</div>
+                                            <div class="info-content" id="domain">-</div>
                                         </div>
 
                                         <div class="margin-bottom-20">
                                             <label>Net Speed</label>
-                                            <div class="info-content" id="net-speed">{{ data.net_speed|default:"-" }}</div>
+                                            <div class="info-content" id="net-speed">-</div>
                                         </div>
 
                                         <div class="margin-bottom-20">
                                             <label>IDD &amp; Area Code</label>
-                                            <div class="info-content" id="idd-area-code">{{ data.idd_code }} - {{ data.area_code }}</div>
+                                            <div class="info-content" id="idd-area-code">-</div>
                                         </div>
 
                                         <div class="margin-bottom-20">
                                             <label>ZIP Code</label>
-                                            <div class="info-content" id="zip-code">{{ data.zipcode|default:"-" }}</div>
+                                            <div class="info-content" id="zip-code">-</div>
                                         </div>
 
                                         <div class="margin-bottom-20">
                                             <label>Weather Station</label>
-                                            <div class="info-content" id="weather-station">{{ data.idd_code|default:"-" }}</div>
+                                            <div class="info-content" id="weather-station">-</div>
                                         </div>
 
                                         <div class="margin-bottom-20">
                                             <label>Elevation</label>
-                                            <div class="info-content" id="elevation">{{ data.elevation|default:"-" }}</div>
+                                            <div class="info-content" id="elevation">-</div>
                                         </div>
 
                                         <div class="margin-bottom-20">
                                             <label>Usage Type</label>
-                                            <div class="info-content" id="usage-type">{{ data.elevation|default:"-" }}</div>
+                                            <div class="info-content" id="usage-type">-</div>
                                         </div>
                                     </div>
 
@@ -169,6 +169,73 @@
     <script type="text/javascript"
         src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
     <script type="text/javascript">
+          window.onload = () => {
+
+            $.getJSON("https://api.ipify.org?format=json", function(data) {
+         
+                // Setting text of element P with id gfg
+                my_ip = data.ip;
+
+                let formData = new FormData();
+            formData.append('link', my_ip);
+        
+        
+            let csrfTokenValue = document.querySelector('[name=csrfmiddlewaretoken]').value;
+            const request = new Request('{% url "getIpInfo" %}', {
+                method: 'POST',
+                body: formData,
+                headers: { 'X-CSRFToken': csrfTokenValue }
+            });
+        
+            fetch(request)
+                .then(response => response.json())
+                .then(result => {
+                    if (result["data"]["err_txt"]) {
+        
+                        $('#ip-address').text("-");
+                        $('#country').text("-");
+                        $('#region-name').text("-");
+                        $('#city-name').text("-")
+                        $('#coordinates').text("-");
+                        $('#isp').text("-");
+                        $('#time-zone').text("-");
+                        $('#domain').text("-");
+                        $('#net-speed').text("-");
+                        $('#idd-area-code').text("-");
+                        $('#zip-code').text("-");
+                        $('#weather-station').text("-");
+                        $('#elevation').text("-");
+                        $('#usage-type').text("-");
+                        $('#map').removeAttr('src');
+                        $('#map').css('background-image', 'url(../static/img/404.jpg)');
+                        $('#map').css('background-size', 'cover');
+                        
+                        $(".alert-container").html('<div class="alert alert-warning alert-dismissible fade show" role="alert"><strong>Sorry!</strong>'+result["data"]["err_txt"]+'<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button></div>');
+                        $(".alert").show();
+                    }
+                    else {
+                        $(".alert").hide();
+                        $('#ip-address').text(result["data"]['ip']);
+                        $('#country').text(result["data"]['country_long']);
+                        $('#region-name').text(result["data"]['region']);
+                        $('#city-name').text(result["data"]['city']);
+                        $('#coordinates').text(result["data"]['latitude'] + ", " + result["data"]['longitude']);
+                        $('#isp').text(result["data"]['isp']);
+                        $('#time-zone').text(result["data"]['timezone']);
+                        $('#domain').text(result["data"]['domain']);
+                        $('#net-speed').text(result["data"]['net_speed']);
+                        $('#idd-area-code').text(result["data"]['idd_code'] + " - " + result["data"]['area_code']);
+                        $('#zip-code').text(result["data"]['zipcode']);
+                        $('#weather-station').text(result["data"]['weather_station_code']);
+                        $('#elevation').text(result["data"]['elevation']);
+                        $('#usage-type').text(result["data"]['usage_type']);
+                        $('#map').attr('src', "https://maps.google.com/maps?q=" + result["data"]['latitude'] + "," + result["data"]['longitude'] + "&output=embed");
+                        $('#label').text("Your Website's IP informations shown below");
+                    }
+                })
+            })
+        };
+
         function clear() {
             $('#link').val('');
             $(".alert").hide();
