@@ -39,7 +39,7 @@
 
 <div align="center">
   <a href="https://github.com/wufoudhil/ip2location_Foudhil-Gharout">
-    <img src="ScreenShoots/img4.jpg" alt="App Screen-Shoot" width="600">
+    <img src="ScreenShots/img4.jpg" alt="App Screen-Shot" width="600">
   </a>
   <h4 align="center">IP2Location Contest 2022 By Foudhil Gharout</h4>
 </div>
@@ -105,7 +105,7 @@ No real action is needed just ``` cd ``` to the app root with your Terminal/Comm
 if you run the app on your localhost you'll get your Public IP informations and location map, otherwise it returns the hosted machine's
 
 <div align="center">
-  <img src="ScreenShoots/img1.jpg" alt="App Screen-Shoot" width="600">
+  <img src="ScreenShots/img1.jpg" alt="App Screen-Shot" width="600">
   <p align="center">IP2Location Contest 2022 | Home page</p>
 </div>
 </br>
